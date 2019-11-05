@@ -1,0 +1,4 @@
+################
+# File format:
+#     <unique-name> <protocol> <domain> <uri> <http code> <search text>
+################

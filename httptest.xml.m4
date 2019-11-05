@@ -1,0 +1,36 @@
+define(`printurl',`$1://$2$3')dnl
+                <httptest>
+                    <name>UNIQNAME</name>
+                    <application>
+                        <name>HTTP Content Check</name>
+                    </application>
+                    <delay>500</delay>
+                    <attempts>1</attempts>
+                    <agent>Zabbix</agent>
+                    <http_proxy/>
+                    <variables/>
+                    <headers/>
+                    <status>0</status>
+                    <authentication>0</authentication>
+                    <http_user/>
+                    <http_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <steps>
+                        <step>
+                            <name>Homepage</name>
+                            <url>printurl(PROTO,SITECN,URI)</url>
+                            <posts/>
+                            <variables/>
+                            <headers/>
+                            <follow_redirects>1</follow_redirects>
+                            <retrieve_mode>0</retrieve_mode>
+                            <timeout>60</timeout>
+                            <required>SEARCHTXT</required>
+                            <status_codes>STATCODE</status_codes>
+                        </step>
+                    </steps>
+                </httptest>
